@@ -1,0 +1,29 @@
+name: Check renovate config
+
+on: [push]
+
+jobs:
+  build:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: technote-space/get-diff-action@v6
+        with:
+          FILES: |
+            renovate.json
+
+      - name: Run tests with ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+        if: env.GIT_DIFF
+
+      - name: validating renovate config
+        run: npx --package renovate -c 'renovate-config-validator'
+        if: env.GIT_DIFF
