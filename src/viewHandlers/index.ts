@@ -1,4 +1,4 @@
-import { App } from "@slack/bolt";
+import { App } from '@slack/bolt';
 
 export type ViewHandler = (app: App) => void;
 

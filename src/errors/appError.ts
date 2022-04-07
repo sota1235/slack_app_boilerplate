@@ -1,4 +1,4 @@
-import Sentry from "@sentry/node";
+import Sentry from '@sentry/node';
 
 export abstract class AppError extends Error {
   abstract errorLevel: Sentry.Severity;

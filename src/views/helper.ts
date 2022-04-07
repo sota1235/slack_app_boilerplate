@@ -13,7 +13,7 @@ type JsonEncodableArray = Array<
 
 // Helper to pass private meta data to Modal
 export function encodePrivateMetadata<T extends JsonEncodable>(
-  data: T
+  data: T,
 ): string {
   return JSON.stringify(data);
 }

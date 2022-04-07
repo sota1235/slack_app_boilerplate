@@ -8,11 +8,11 @@ import {
   Select,
   Textarea,
   Option,
-} from "jsx-slack";
-import { callbackIds } from "../../constants";
-import { encodePrivateMetadata } from "../helper";
+} from 'jsx-slack';
+import { callbackIds } from '../../constants';
+import { encodePrivateMetadata } from '../helper';
 
-const actionId = "sampleForm";
+const actionId = 'sampleForm';
 
 export const SampleModal = () =>
   JSXSlack(
@@ -38,5 +38,5 @@ export const SampleModal = () =>
         <Option value="apple">Apple</Option>
         <Option value="grape">Grape</Option>
       </Select>
-    </Modal>
+    </Modal>,
   );
