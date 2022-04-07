@@ -1,16 +1,16 @@
-import { App, ExpressReceiver, LogLevel } from '@slack/bolt';
-import { registerMessageHandlers } from './messageHandlers';
-import { Severity } from '@sentry/node';
-import { captureException, initSentry } from './sentry';
-import { registerEventHandlers } from './eventHandlers';
-import { registerActionHandlers } from './actionHandlers';
-import { registerViewHandlers } from './viewHandlers';
-import { AppError } from './errors/appError';
-import { ExtendedErrorHandlerArgs } from '@slack/bolt/dist/App';
-import { registerCommandHandlers } from './commandHandlers';
+import { App, ExpressReceiver, LogLevel } from "@slack/bolt";
+import { registerMessageHandlers } from "./messageHandlers";
+import { Severity } from "@sentry/node";
+import { captureException, initSentry } from "./sentry";
+import { registerEventHandlers } from "./eventHandlers";
+import { registerActionHandlers } from "./actionHandlers";
+import { registerViewHandlers } from "./viewHandlers";
+import { AppError } from "./errors/appError";
+import { ExtendedErrorHandlerArgs } from "@slack/bolt/dist/App";
+import { registerCommandHandlers } from "./commandHandlers";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-require('source-map-support').install();
+require("source-map-support").install();
 
 // Sentry initialization
 initSentry();
@@ -24,7 +24,7 @@ const app = new App({
   receiver,
   token: process.env.SLACK_BOT_TOKEN,
   logLevel:
-    process.env.NODE_ENV === 'production' ? LogLevel.WARN : LogLevel.DEBUG,
+    process.env.NODE_ENV === "production" ? LogLevel.WARN : LogLevel.DEBUG,
   extendedErrorHandler: true,
 });
 
@@ -49,11 +49,11 @@ app.error(
         tags: sentryTags,
       });
     }
-  },
+  }
 );
 
-receiver.router.get('/liveness_check', (_, res) => {
-  res.send('OK');
+receiver.router.get("/liveness_check", (_, res) => {
+  res.send("OK");
 });
 
 // Register message handlers
@@ -81,17 +81,17 @@ registerCommandHandlers(app);
 
   try {
     await app.client.chat.postMessage({
-      channel: 'general',
+      channel: "general",
       text: `[${process.env.NODE_ENV}]Botがデプロイされました`,
       token: process.env.SLACK_BOT_TOKEN,
-      icon_emoji: ':wrench:',
+      icon_emoji: ":wrench:",
     });
   } catch (e) {
     if (e instanceof Error) {
       captureException(e);
     } else {
       console.error(e);
-      captureException(new Error('unknown error'));
+      captureException(new Error("unknown error"));
     }
   }
 })();

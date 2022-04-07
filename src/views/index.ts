@@ -1,4 +1,4 @@
-import { MessageAttachment } from '@slack/types';
+import { MessageAttachment } from "@slack/types";
 
 export interface View {
   blocks: any;

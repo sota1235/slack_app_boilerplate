@@ -1,9 +1,8 @@
-import { App } from '@slack/bolt';
+import { App } from "@slack/bolt";
 
 export type ActionHandler = (app: App) => void;
 
-const actionHandlers: ActionHandler[] = [
-];
+const actionHandlers: ActionHandler[] = [];
 
 export const registerActionHandlers = (app: App) => {
   for (const handler of actionHandlers) {

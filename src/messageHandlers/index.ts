@@ -1,5 +1,5 @@
-import { App } from '@slack/bolt';
-import { registerEchoHandler } from './echo';
+import { App } from "@slack/bolt";
+import { registerEchoHandler } from "./echo";
 
 // Should return text for help command
 export type MessageHandler = (app: App) => {
@@ -17,6 +17,6 @@ export const registerMessageHandlers = (app: App): void => {
   }
 
   app.message(/help/i, async ({ say }) => {
-    await say(helpMessages.join('\n'));
+    await say(helpMessages.join("\n"));
   });
 };
