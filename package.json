@@ -27,7 +27,7 @@
     "lint-staged": "12.3.8",
     "nodemon": "^2.0.15",
     "prettier": "2.6.2",
-    "ts-jest": "28.0.1",
+    "ts-jest": "28.0.2",
     "ts-node": "^10.0.0"
   },
   "scripts": {
