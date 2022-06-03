@@ -9,8 +9,8 @@
     "lib": "lib"
   },
   "dependencies": {
-    "@sentry/node": "^6.13.2",
-    "@sentry/tracing": "^6.13.2",
+    "@sentry/node": "^7.0.0",
+    "@sentry/tracing": "^7.0.0",
     "@slack/bolt": "^3.10.0",
     "@slack/web-api": "^6.0.0",
     "@types/jest": "^27.0.0",
