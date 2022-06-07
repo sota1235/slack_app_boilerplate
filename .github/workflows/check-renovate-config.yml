@@ -1,6 +1,9 @@
 name: Check renovate config
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'renovate.json'
 
 jobs:
   build:
@@ -13,10 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: technote-space/get-diff-action@v6
-        with:
-          FILES: |
-            renovate.json
 
       - name: Run tests with ${{ matrix.node-version }}
         uses: actions/setup-node@v3
