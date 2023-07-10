@@ -2,9 +2,6 @@
   "name": "slack_app_boilerplate",
   "private": true,
   "main": "index.js",
-  "engines": {
-    "node": "16.x"
-  },
   "directories": {
     "lib": "lib"
   },
