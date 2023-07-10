@@ -1,6 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>sota1235/renovate-config"
+    "github>sota1235/renovate-config#0.0.2"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@sota1235/eslint-config",
+        "eslint",
+        "prettier"
+      ],
+      "postUpgradeTasks": {
+        "commands": ["npm run fix"],
+        "fileFilters": ["10x_bot/package-lock.json", "10x_bot/src/**.{ts,tsx}"],
+        "executionMode": "update"
+      }
+    }
   ]
 }
