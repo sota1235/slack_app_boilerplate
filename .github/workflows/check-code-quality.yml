@@ -2,10 +2,14 @@ name: Check code quality
 
 on:
   push:
+    paths:
+      - *
     paths-ignore:
-      - README.md
       - .husky/**
+      - .env.example
+      - .gitignore
       - appManifest.yaml
+      - README.md
       - renovate.json
 
 jobs:
@@ -21,8 +25,11 @@ jobs:
       - name: Setting up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version-file: .node-version
           cache: npm
+
+      - name: build
+        run: npm run build
 
       - name: npm install
         run: npm ci --no-audit --no-fund
@@ -32,6 +39,3 @@ jobs:
 
       - name: test
         run: npm run test:ci
-
-      - name: build
-        run: npm run build

@@ -3,7 +3,8 @@ name: Check renovate config
 on:
   push:
     paths:
-      - 'renovate.json'
+      - renovate.json
+      - .node-version
 
 jobs:
   validate-renovate-config:
@@ -18,7 +19,7 @@ jobs:
       - name: Setting up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: .node-version
 
       - name: validating renovate config
         run: npx --package renovate -c 'renovate-config-validator'
