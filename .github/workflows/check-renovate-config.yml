@@ -19,7 +19,7 @@ jobs:
       - name: Setting up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: .node-version
+          node-version-file: .node-version
 
       - name: validating renovate config
         run: npx --package renovate -c 'renovate-config-validator'
