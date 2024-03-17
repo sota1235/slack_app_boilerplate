@@ -6,7 +6,7 @@ export type ReactionAddedHandler = (
   args: SlackEventMiddlewareArgs<'reaction_added'>,
 ) => void;
 
-const handlerMappings: { [key: string]: ReactionAddedHandler } = {
+const handlerMappings: Record<string, ReactionAddedHandler> = {
   white_check_mark: checked,
 };
 
