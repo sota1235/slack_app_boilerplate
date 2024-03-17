@@ -41,7 +41,8 @@
     "debug": "ts-node -r dotenv/config",
     "test": "jest",
     "test:ci": "jest -c ./jest.config.ci.js",
-    "start": "node lib/index.js"
+    "start": "node lib/index.js",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.ts": [
