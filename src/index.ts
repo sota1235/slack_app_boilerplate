@@ -73,7 +73,7 @@ registerCommandHandlers(app);
 
 // Start
 (async () => {
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT ?? 3000;
   // Start the app
   await app.start(port as number);
 

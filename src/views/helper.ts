@@ -7,9 +7,14 @@ export interface JsonEncodable {
     | JsonEncodable
     | JsonEncodableArray;
 }
-type JsonEncodableArray = Array<
-  string | number | boolean | Date | JsonEncodable | JsonEncodableArray
->;
+type JsonEncodableArray = (
+  | string
+  | number
+  | boolean
+  | Date
+  | JsonEncodable
+  | JsonEncodableArray
+)[];
 
 // Helper to pass private meta data to Modal
 export function encodePrivateMetadata<T extends JsonEncodable>(
