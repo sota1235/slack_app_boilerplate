@@ -1,7 +1,7 @@
-import { ReactionAddedHandler } from './index';
+import type { ReactionAddedHandler } from "./index";
 
 const checked: ReactionAddedHandler = () => {
-  console.log('checked dispatched!');
+  console.log("checked dispatched!");
 };
 
 export { checked };

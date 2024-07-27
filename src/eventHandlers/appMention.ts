@@ -1,8 +1,8 @@
-import { EventHandler } from './index';
-import { App } from '@slack/bolt';
+import type { App } from "@slack/bolt";
+import type { EventHandler } from "./index";
 
 export const registerAppMentionEventHandlers: EventHandler = (app: App) => {
-  app.event<'app_mention'>('app_mention', async () => {
+  app.event<"app_mention">("app_mention", async () => {
     // TODO: impl
   });
 };
