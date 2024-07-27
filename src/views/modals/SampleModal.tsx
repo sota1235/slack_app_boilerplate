@@ -4,15 +4,15 @@ import {
   Divider,
   JSXSlack,
   Modal,
+  Option,
   Section,
   Select,
   Textarea,
-  Option,
-} from 'jsx-slack';
-import { callbackIds } from '../../constants';
-import { encodePrivateMetadata } from '../helper';
+} from "jsx-slack";
+import { callbackIds } from "../../constants";
+import { encodePrivateMetadata } from "../helper";
 
-const actionId = 'sampleForm';
+const actionId = "sampleForm";
 
 export const SampleModal = () =>
   JSXSlack(

@@ -1,9 +1,9 @@
 /* eslint @typescript-eslint/naming-convention: 0 */
-import { SlackEventMiddlewareArgs } from '@slack/bolt';
-import { checked } from './checked';
+import type { SlackEventMiddlewareArgs } from "@slack/bolt";
+import { checked } from "./checked";
 
 export type ReactionAddedHandler = (
-  args: SlackEventMiddlewareArgs<'reaction_added'>,
+  args: SlackEventMiddlewareArgs<"reaction_added">,
 ) => void;
 
 const handlerMappings: Record<string, ReactionAddedHandler> = {

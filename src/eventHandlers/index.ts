@@ -1,6 +1,6 @@
-import { App } from '@slack/bolt';
-import { registerReactionAddedEventHandlers } from './reactionAdded';
-import { registerAppMentionEventHandlers } from './appMention';
+import type { App } from "@slack/bolt";
+import { registerAppMentionEventHandlers } from "./appMention";
+import { registerReactionAddedEventHandlers } from "./reactionAdded";
 
 export type EventHandler = (app: App) => void;
 

@@ -1,5 +1,5 @@
-import { App } from '@slack/bolt';
-import { MessageHandler } from './index';
+import type { App } from "@slack/bolt";
+import type { MessageHandler } from "./index";
 
 export const registerEchoHandler: MessageHandler = (app: App) => {
   app.message(/echo (.*)/i, async ({ say, context }) => {
@@ -7,7 +7,7 @@ export const registerEchoHandler: MessageHandler = (app: App) => {
   });
 
   return {
-    command: 'echo',
-    description: 'echo command',
+    command: "echo",
+    description: "echo command",
   };
 };

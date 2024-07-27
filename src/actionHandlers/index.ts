@@ -1,4 +1,4 @@
-import { App } from '@slack/bolt';
+import type { App } from "@slack/bolt";
 
 export type ActionHandler = (app: App) => void;
 

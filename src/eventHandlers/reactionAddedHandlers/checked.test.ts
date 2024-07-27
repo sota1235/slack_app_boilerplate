@@ -1,5 +1,5 @@
-import { checked } from './checked';
+import { checked } from "./checked";
 
-test('checked will work without error', () => {
+test("checked will work without error", () => {
   checked({} as any);
 });
