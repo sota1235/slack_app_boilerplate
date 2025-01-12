@@ -1,4 +1,3 @@
-import { Severity } from "@sentry/node";
 import { App, ExpressReceiver, LogLevel } from "@slack/bolt";
 import type { ExtendedErrorHandlerArgs } from "@slack/bolt/dist/App";
 import { registerActionHandlers } from "./actionHandlers";
@@ -45,7 +44,7 @@ app.error(
       });
     } else {
       captureException(error, {
-        level: Severity.Critical,
+        level: "error",
         tags: sentryTags,
       });
     }
