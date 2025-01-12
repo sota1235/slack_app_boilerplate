@@ -8,8 +8,9 @@
   "dependencies": {
     "@sentry/node": "^6.13.2",
     "@sentry/tracing": "^6.13.2",
-    "@slack/bolt": "^3.10.0",
-    "@slack/web-api": "^7.0.0",
+    "@slack/bolt": "4.2.0",
+    "@slack/web-api": "7.8.0",
+    "@types/express": "5.0.0",
     "@types/jest": "^29.0.0",
     "dotenv": "^16.0.0",
     "jsx-slack": "^6.0.0",
@@ -40,6 +41,8 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.ts": ["npm run fix"]
+    "*.ts": [
+      "npm run fix"
+    ]
   }
 }
