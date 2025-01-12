@@ -41,8 +41,6 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.ts": [
-      "npm run fix"
-    ]
+    "*.ts": ["npm run fix"]
   }
 }
