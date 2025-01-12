@@ -1,6 +1,6 @@
-import type Sentry from "@sentry/node";
+import type { SeverityLevel } from "@sentry/node";
 
 export abstract class AppError extends Error {
-  abstract errorLevel: Sentry.Severity;
+  abstract errorLevel: SeverityLevel;
   abstract getExtras(): Record<string, any>;
 }

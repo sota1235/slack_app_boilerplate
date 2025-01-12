@@ -14,6 +14,7 @@
     "outDir": "./lib",
     "jsx": "react-jsx",
     "jsxImportSource": "jsx-slack",
+    "skipLibCheck": true,
     "typeRoots": ["src/types", "node_modules/@types"]
   },
   "include": ["src/**/*"],
