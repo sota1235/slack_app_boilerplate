@@ -8,7 +8,7 @@
   "dependencies": {
     "@sentry/node": "8.52.1",
     "@sentry/tracing": "7.120.3",
-    "@slack/bolt": "4.2.1",
+    "@slack/bolt": "4.4.0",
     "@types/express": "5.0.2",
     "@types/jest": "^29.0.0",
     "@types/node": "22.15.23",
