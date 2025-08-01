@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@sentry/node": "8.55.0",
-    "@sentry/tracing": "7.120.3",
+    "@sentry/tracing": "7.120.4",
     "@slack/bolt": "4.4.0",
     "@types/express": "5.0.3",
     "@types/jest": "^30.0.0",
