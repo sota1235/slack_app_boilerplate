@@ -18,7 +18,7 @@
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.5",
+    "@biomejs/biome": "2.2.7",
     "husky": "9.1.7",
     "jest": "30.2.0",
     "lint-staged": "16.2.3",
