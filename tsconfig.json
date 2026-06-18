@@ -11,6 +11,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
+    "rootDir": "./src",
     "outDir": "./lib",
     "jsx": "react-jsx",
     "jsxImportSource": "jsx-slack",
