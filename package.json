@@ -14,7 +14,7 @@
     "dotenv": "^17.0.0",
     "jsx-slack": "6.1.2",
     "source-map-support": "^0.5.20",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.3",
