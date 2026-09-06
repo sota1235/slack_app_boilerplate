@@ -6,7 +6,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "@sentry/node": "10.71.0",
+    "@sentry/node": "10.73.0",
     "@sentry/tracing": "7.120.4",
     "@slack/bolt": "5.0.0",
     "@types/express": "5.0.6",
