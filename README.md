@@ -1,5 +1,4 @@
-Slack App Boilerplate
-====
+# Slack App Boilerplate
 
 ## Requirement
 
