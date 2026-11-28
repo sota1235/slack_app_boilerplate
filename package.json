@@ -18,13 +18,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.9",
-    "@vitest/coverage-v8": "5.1.0",
+    "@vitest/coverage-v8": "5.1.1",
     "husky": "9.1.7",
     "lint-staged": "17.6.1",
     "nodemon": "^3.0.0",
     "prettier": "3.10.1",
     "ts-node": "^10.0.0",
-    "vitest": "5.1.0"
+    "vitest": "5.1.1"
   },
   "scripts": {
     "build": "npm run build:ts",
